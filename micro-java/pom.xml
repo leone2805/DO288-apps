@@ -137,9 +137,16 @@
               </execution>
             </executions>
           </plugin>
+	  <!-- JKube Maven plugin -->
+	  <plugin>
+		  <groupId>org.eclipse.jkube</groupId>
+		  <artifactId>openshift-maven-plugin</artifactId>
+		  <version>1.2.0</version>
+	  </plugin>
         </plugins>
       </build>
       <properties>
+	<jkube.build.switchToDeployment>true</jkube.build.switchToDeployment>
         <quarkus.package.type>native</quarkus.package.type>
       </properties>
     </profile>
